@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeTailor - Smart Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4ff, #ff6b6b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            display: flex;
+            align-items: center;
+            padding: 100px 2rem 60px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #00d4ff, #ff6b6b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #bbb;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #0a0a0a;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            color: #00d4ff;
+        }
+
+        /* Templates Section */
+        .templates-section {
+            padding: 80px 2rem;
+            background: #0f0f1a;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .template-card {
+            background: rgba(26, 26, 46, 0.6);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .template-card:hover {
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+        }
+
+        .template-card.selected {
+            border-color: #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .template-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .ats-score {
+            display: inline-block;
+            background: #4CAF50;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Builder Section */
+        .builder-section {
+            padding: 80px 2rem;
+        }
+
+        .builder-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .upload-card, .preview-card {
+            background: rgba(26, 26, 46, 0.6);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .upload-area {
+            border: 2px dashed rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .upload-area:hover {
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        .upload-area i {
+            font-size: 3rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+        }
+
+        .extracted-data {
+            margin-top: 1rem;
+        }
+
+        .data-field {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .data-label {
+            font-weight: 600;
+            color: #00d4ff;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-badge {
+            background: rgba(0, 212, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .generate-btn {
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 2rem;
+            background: #0f0f1a;
+        }
+
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info, .contact-form {
+            background: rgba(26, 26, 46, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .contact-detail i {
+            font-size: 1.5rem;
+            color: #00d4ff;
+        }
+
+        .contact-detail a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0a0a0a;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .builder-container {
+                grid-template-columns: 1fr;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📄 ResumeTailor</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#templates">Templates</a></li>
+                <li><a href="#builder">Builder</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Create <span class="highlight">ATS-Friendly</span> Resumes That Get Hired</h1>
+            <p>Choose from professional templates and optimize your resume for success</p>
+            <div>
+                <button class="btn btn-primary" onclick="scrollToBuilder()">
+                    <i class="fas fa-magic"></i> Build Resume Now
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">95%</span>
+                    <span>ATS Success Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50k+</span>
+                    <span>Resumes Built</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3x</span>
+                    <span>More Interviews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="templates" class="templates-section">
+        <div class="section-header">
+            <h2>Choose Your <span class="highlight">Template</span></h2>
+            <p>Professionally designed templates optimized for ATS systems</p>
+        </div>
+        <div class="templates-grid" id="templatesGrid">
+            <!-- Templates will be loaded here -->
+        </div>
+    </section>
+
+    <section id="builder" class="builder-section">
+        <div class="section-header">
+            <h2>Build Your <span class="highlight">Resume</span></h2>
+            <p>Upload your existing resume and we'll extract the data</p>
+        </div>
+        <div class="builder-container">
+            <div class="upload-card">
+                <div class="upload-area" onclick="document.getElementById('resumeInput').click()">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Upload Your Resume</h3>
+                    <p>Click to upload (PDF, DOCX, TXT)</p>
+                    <input type="file" id="resumeInput" style="display: none" accept=".pdf,.docx,.txt">
+                </div>
+                <div id="uploadStatus" style="margin-top: 1rem; text-align: center;"></div>
+            </div>
+            <div class="preview-card">
+                <h3><i class="fas fa-file-alt"></i> Extracted Information</h3>
+                <div id="extractedData" class="extracted-data">
+                    <p style="color: #888; text-align: center;">Upload a resume to see extracted data</p>
+                </div>
+                <button class="btn btn-primary generate-btn" id="generateBtn" disabled onclick="generateResume()">
+                    <i class="fas fa-magic"></i> Generate Resume
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Get in <span class="highlight">Touch</span></h2>
+            <p>Have questions? We're here to help</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <strong>Maryam Fatima</strong><br>
+                        <small>Resume Specialist</small>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:maryamfatima28022003@gmail.com">maryamfatima28022003@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Phone</strong><br>
+                        <a href="tel:03103024004">0310 3024004</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Name" id="contactName" required>
+                    <input type="email" placeholder="Your Email" id="contactEmail" required>
+                    <textarea rows="4" placeholder="Your Message" id="contactMessage" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 ResumeTailor - Created by Maryam Fatima</p>
+        <p style="margin-top: 0.5rem;">📧 maryamfatima28022003@gmail.com | 📞 0310 3024004</p>
+    </footer>
+
+    <script>
+        let selectedTemplate = null;
+        let resumeData = null;
+
+        // Load templates
+        async function loadTemplates() {
+            try {
+                const response = await fetch('/api/get-templates');
+                const data = await response.json();
+                displayTemplates(data.templates);
+            } catch (error) {
+                console.error('Error:', error);
+                // Fallback templates
+                displayFallbackTemplates();
+            }
+        }
+
+        function displayTemplates(templates) {
+            const grid = document.getElementById('templatesGrid');
+            grid.innerHTML = templates.map(template => `
+                <div class="template-card" data-id="${template.id}" onclick="selectTemplate('${template.id}')">
+                    <i class="fas ${template.icon}" style="color: ${template.color}"></i>
+                    <h3>${template.name}</h3>
+                    <p style="color: #bbb; font-size: 0.9rem;">${template.description}</p>
+                    <div class="ats-score">ATS: ${template.ats_score}%</div>
+                </div>
+            `).join('');
+        }
+
+        function displayFallbackTemplates() {
+            const templates = [
+                { id: 'modern', name: 'Modern Professional', icon: 'fa-file-alt', color: '#4A90E2', ats_score: 98, description: 'Clean, modern design' },
+                { id: 'professional', name: 'Classic Professional', icon: 'fa-briefcase', color: '#2C3E50', ats_score: 96, description: 'Traditional format' },
+                { id: 'technical', name: 'Technical Developer', icon: 'fa-code', color: '#00D4FF', ats_score: 97, description: 'For developers' }
+            ];
+            displayTemplates(templates);
+        }
+
+        function selectTemplate(id) {
+            selectedTemplate = id;
+            document.querySelectorAll('.template-card').forEach(card => {
+                card.classList.remove('selected');
+                if (card.dataset.id === id) {
+                    card.classList.add('selected');
+                }
+            });
+            document.getElementById('generateBtn').disabled = !resumeData;
+            showNotification(`Template selected!`, 'success');
+        }
+
+        // File upload
+        document.getElementById('resumeInput').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const formData = new FormData();
+            formData.append('resume', file);
+
+            const statusDiv = document.getElementById('uploadStatus');
+            statusDiv.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uploading...';
+
+            try {
+                const response = await fetch('/api/upload-resume', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    resumeData = data.data;
+                    displayExtractedData(data.data);
+                    document.getElementById('generateBtn').disabled = !selectedTemplate;
+                    statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> Upload successful!';
+                    statusDiv.style.color = '#4CAF50';
+                } else {
+                    statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Upload failed';
+                    statusDiv.style.color = '#f44336';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Network error';
+                statusDiv.style.color = '#f44336';
+            }
+        });
+
+        function displayExtractedData(data) {
+            const container = document.getElementById('extractedData');
+            container.innerHTML = `
+                <div class="data-field">
+                    <span class="data-label">Name</span>
+                    <span>${data.name || 'Not detected'}</span>
+                </div>
+                <div class="data-field">
+                    <span class="data-label">Email</span>
+                    <span>${data.email || 'Not detected'}</span>
+                </div>
+                <div class="data-field">
+                    <span class="data-label">Phone</span>
+                    <span>${data.phone || 'Not detected'}</span>
+                </div>
+                <div class="data-field">
+                    <span class="data-label">Skills</span>
+                    <div class="skills-container">
+                        ${data.skills.map(s => `<span class="skill-badge">${s}</span>`).join('')}
+                    </div>
+                </div>
+                <div class="data-field">
+                    <span class="data-label">Summary</span>
+                    <span>${data.summary || 'Not detected'}</span>
+                </div>
+            `;
+        }
+
+        async function generateResume() {
+            if (!selectedTemplate) {
+                showNotification('Please select a template first!', 'error');
+                return;
+            }
+
+            const btn = document.getElementById('generateBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+
+            try {
+                const response = await fetch('/api/generate-resume', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ template_id: selectedTemplate })
+                });
+
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `resume_${selectedTemplate}.txt`;
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    showNotification('Resume generated!', 'success');
+                }
+            } catch (error) {
+                showNotification('Error generating resume', 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-magic"></i> Generate Resume';
+            }
+        }
+
+        function showNotification(message, type) {
+            const notif = document.createElement('div');
+            notif.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#4CAF50' : '#f44336'};
+                color: white;
+                padding: 12px 24px;
+                border-radius: 8px;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+            `;
+            notif.innerHTML = message;
+            document.body.appendChild(notif);
+            setTimeout(() => notif.remove(), 3000);
+        }
+
+        function scrollToBuilder() {
+            document.getElementById('builder').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            showNotification('Message sent! I will get back to you soon.', 'success');
+            e.target.reset();
+        });
+
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Load templates on page load
+        loadTemplates();
+    </script>
+</body>
+</html>

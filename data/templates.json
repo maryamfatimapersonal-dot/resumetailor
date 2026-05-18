@@ -1,0 +1,268 @@
+{
+  "templates": [
+    {
+      "id": "modern",
+      "name": "Modern Professional",
+      "category": "Professional",
+      "color": "#4A90E2",
+      "icon": "fa-file-alt",
+      "previewImage": "/static/images/templates/modern.png",
+      "description": "Clean, modern design with a focus on skills and achievements. Perfect for tech and creative roles.",
+      "features": [
+        "ATS-friendly layout",
+        "Two-column design",
+        "Skills highlight section",
+        "Timeline experience display",
+        "Social media integration"
+      ],
+      "experience_level": ["entry", "mid", "senior"],
+      "industries": ["tech", "creative", "business"],
+      "popularity": 95,
+      "ats_score": 98,
+      "downloads": 15234,
+      "price": "free",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": "professional",
+      "name": "Classic Professional",
+      "category": "Corporate",
+      "color": "#2C3E50",
+      "icon": "fa-briefcase",
+      "previewImage": "/static/images/templates/professional.png",
+      "description": "Traditional format preferred by Fortune 500 companies. Clean, elegant, and professional.",
+      "features": [
+        "Traditional single-column layout",
+        "Chronological experience",
+        "Education focus",
+        "References section",
+        "Achievement metrics"
+      ],
+      "experience_level": ["mid", "senior", "executive"],
+      "industries": ["finance", "law", "corporate", "government"],
+      "popularity": 88,
+      "ats_score": 96,
+      "downloads": 12890,
+      "price": "free",
+      "last_updated": "2024-01-10"
+    },
+    {
+      "id": "creative",
+      "name": "Creative Portfolio",
+      "category": "Creative",
+      "color": "#FF6B6B",
+      "icon": "fa-palette",
+      "previewImage": "/static/images/templates/creative.png",
+      "description": "Stand out with unique design for creative roles. Showcase your portfolio and personality.",
+      "features": [
+        "Unique asymmetrical layout",
+        "Portfolio gallery section",
+        "Skills visualization",
+        "Social links integration",
+        "Project showcase"
+      ],
+      "experience_level": ["entry", "mid"],
+      "industries": ["design", "marketing", "media", "art"],
+      "popularity": 82,
+      "ats_score": 85,
+      "downloads": 9876,
+      "price": "free",
+      "last_updated": "2024-01-20"
+    },
+    {
+      "id": "minimal",
+      "name": "Minimal Clean",
+      "category": "Modern",
+      "color": "#95A5A6",
+      "icon": "fa-minus-circle",
+      "previewImage": "/static/images/templates/minimal.png",
+      "description": "Content-first design with maximum readability. Perfect for content-heavy resumes.",
+      "features": [
+        "Single column focus",
+        "Content prioritized",
+        "High readability",
+        "PDF optimized",
+        "Print-friendly"
+      ],
+      "experience_level": ["entry", "mid", "senior"],
+      "industries": ["tech", "education", "nonprofit", "healthcare"],
+      "popularity": 90,
+      "ats_score": 99,
+      "downloads": 11234,
+      "price": "free",
+      "last_updated": "2024-01-05"
+    },
+    {
+      "id": "executive",
+      "name": "Executive Suite",
+      "category": "Executive",
+      "color": "#8E44AD",
+      "icon": "fa-crown",
+      "previewImage": "/static/images/templates/executive.png",
+      "description": "Premium design for leadership and C-level positions. Make a powerful impression.",
+      "features": [
+        "Executive summary section",
+        "Leadership highlights",
+        "Achievement metrics dashboard",
+        "Board memberships section",
+        "Strategic initiatives display"
+      ],
+      "experience_level": ["senior", "executive"],
+      "industries": ["executive", "management", "consulting", "director"],
+      "popularity": 75,
+      "ats_score": 92,
+      "downloads": 5432,
+      "price": "premium",
+      "last_updated": "2024-01-25"
+    },
+    {
+      "id": "technical",
+      "name": "Technical Developer",
+      "category": "Technical",
+      "color": "#00D4FF",
+      "icon": "fa-code",
+      "previewImage": "/static/images/templates/technical.png",
+      "description": "Optimized for developers and engineers. Showcase your technical skills and projects.",
+      "features": [
+        "GitHub integration",
+        "Tech stack section",
+        "Projects showcase",
+        "Certifications display",
+        "Code repository links"
+      ],
+      "experience_level": ["entry", "mid", "senior"],
+      "industries": ["software", "engineering", "data", "devops"],
+      "popularity": 92,
+      "ats_score": 97,
+      "downloads": 14321,
+      "price": "free",
+      "last_updated": "2024-01-18"
+    },
+    {
+      "id": "academic",
+      "name": "Academic Research",
+      "category": "Academic",
+      "color": "#20B2AA",
+      "icon": "fa-graduation-cap",
+      "previewImage": "/static/images/templates/academic.png",
+      "description": "Perfect for academic and research positions. Highlight publications and research work.",
+      "features": [
+        "Publications section",
+        "Research projects",
+        "Conference presentations",
+        "Teaching experience",
+        "Grants and awards"
+      ],
+      "experience_level": ["entry", "mid", "senior"],
+      "industries": ["academia", "research", "education", "science"],
+      "popularity": 78,
+      "ats_score": 94,
+      "downloads": 7654,
+      "price": "free",
+      "last_updated": "2024-01-12"
+    },
+    {
+      "id": "medical",
+      "name": "Medical & Healthcare",
+      "category": "Medical",
+      "color": "#E74C3C",
+      "icon": "fa-heartbeat",
+      "previewImage": "/static/images/templates/medical.png",
+      "description": "Designed for healthcare professionals. Highlight clinical experience and certifications.",
+      "features": [
+        "Clinical experience section",
+        "Licenses & certifications",
+        "Specialties display",
+        "Research publications",
+        "Patient care metrics"
+      ],
+      "experience_level": ["entry", "mid", "senior"],
+      "industries": ["medical", "healthcare", "nursing", "pharmaceutical"],
+      "popularity": 81,
+      "ats_score": 93,
+      "downloads": 8321,
+      "price": "free",
+      "last_updated": "2024-01-22"
+    },
+    {
+      "id": "legal",
+      "name": "Legal Professional",
+      "category": "Legal",
+      "color": "#34495E",
+      "icon": "fa-gavel",
+      "previewImage": "/static/images/templates/legal.png",
+      "description": "Professional template for legal professionals. Showcase cases and legal expertise.",
+      "features": [
+        "Bar admissions",
+        "Notable cases",
+        "Legal publications",
+        "Court experience",
+        "Practice areas"
+      ],
+      "experience_level": ["mid", "senior", "executive"],
+      "industries": ["legal", "law", "paralegal", "attorney"],
+      "popularity": 76,
+      "ats_score": 95,
+      "downloads": 6234,
+      "price": "free",
+      "last_updated": "2024-01-08"
+    },
+    {
+      "id": "sales",
+      "name": "Sales & Marketing",
+      "category": "Business",
+      "color": "#F39C12",
+      "icon": "fa-chart-line",
+      "previewImage": "/static/images/templates/sales.png",
+      "description": "Results-driven template for sales and marketing professionals.",
+      "features": [
+        "Revenue metrics",
+        "Client portfolio",
+        "Campaign results",
+        "Awards & recognition",
+        "Sales achievements"
+      ],
+      "experience_level": ["entry", "mid", "senior"],
+      "industries": ["sales", "marketing", "business development", "retail"],
+      "popularity": 85,
+      "ats_score": 94,
+      "downloads": 9876,
+      "price": "free",
+      "last_updated": "2024-01-28"
+    }
+  ],
+  "categories": {
+    "all": "All Templates",
+    "professional": "Professional",
+    "creative": "Creative",
+    "technical": "Technical",
+    "executive": "Executive",
+    "academic": "Academic",
+    "medical": "Medical",
+    "legal": "Legal",
+    "business": "Business"
+  },
+  "experience_levels": {
+    "entry": {
+      "name": "Entry Level (0-2 years)",
+      "color": "#4CAF50",
+      "icon": "fa-seedling",
+      "templates": ["modern", "creative", "minimal", "technical", "sales"]
+    },
+    "mid": {
+      "name": "Mid Level (3-7 years)",
+      "color": "#2196F3",
+      "icon": "fa-chart-simple",
+      "templates": ["modern", "professional", "minimal", "technical", "sales", "legal", "medical"]
+    },
+    "senior": {
+      "name": "Senior Level (8+ years)",
+      "color": "#FF9800",
+      "icon": "fa-star",
+      "templates": ["professional", "executive", "technical", "legal", "medical"]
+    }
+  },
+  "popular_templates": ["modern", "technical", "minimal", "professional"],
+  "new_templates": ["creative", "sales"],
+  "featured_template": "modern"
+}

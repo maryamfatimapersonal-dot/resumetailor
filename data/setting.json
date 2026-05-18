@@ -1,0 +1,45 @@
+{
+  "website": {
+    "name": "ResumeTailor",
+    "title": "Smart Resume Builder with ATS Templates",
+    "description": "Create ATS-friendly resumes that get you hired. Choose from professional templates, optimize with AI, and land your dream job.",
+    "keywords": "resume builder, ATS resume, job search, resume templates, CV maker",
+    "author": "Maryam Fatima",
+    "email": "maryamfatima28022003@gmail.com",
+    "phone": "03103024004",
+    "year": 2024
+  },
+  "features": {
+    "enable_ai_analysis": true,
+    "enable_ats_score": true,
+    "enable_template_preview": true,
+    "enable_demo_video": false,
+    "enable_live_chat": false
+  },
+  "limits": {
+    "max_file_size_mb": 10,
+    "allowed_formats": ["pdf", "docx", "txt"],
+    "free_templates": 10,
+    "premium_templates": 0
+  },
+  "social_links": {
+    "email": "maryamfatima28022003@gmail.com",
+    "whatsapp": "https://wa.me/923103024004",
+    "linkedin": "https://linkedin.com/in/maryam-fatima",
+    "github": "https://github.com/maryamfatima",
+    "twitter": "https://twitter.com/maryamfatima"
+  },
+  "colors": {
+    "primary": "#00d4ff",
+    "secondary": "#ff6b6b",
+    "dark": "#0a0a0a",
+    "light": "#ffffff",
+    "success": "#4CAF50",
+    "warning": "#FF9800",
+    "error": "#f44336"
+  },
+  "analytics": {
+    "enabled": false,
+    "tracking_id": ""
+  }
+}

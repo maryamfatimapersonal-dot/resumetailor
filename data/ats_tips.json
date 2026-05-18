@@ -1,0 +1,89 @@
+{
+  "tips": [
+    {
+      "id": 1,
+      "title": "Use Standard Headings",
+      "icon": "fa-heading",
+      "description": "Use standard section headings like 'Work Experience', 'Education', and 'Skills'. ATS systems are programmed to recognize these specific headings.",
+      "importance": "high",
+      "color": "#4CAF50"
+    },
+    {
+      "id": 2,
+      "title": "Avoid Graphics & Tables",
+      "icon": "fa-table",
+      "description": "Stick to simple text formatting. Complex graphics, tables, and text boxes can confuse ATS parsers and cause your information to be missed.",
+      "importance": "high",
+      "color": "#f44336"
+    },
+    {
+      "id": 3,
+      "title": "Include Relevant Keywords",
+      "icon": "fa-key",
+      "description": "Carefully read the job description and include exact keywords and phrases. Match the language used in the job posting.",
+      "importance": "high",
+      "color": "#FF9800"
+    },
+    {
+      "id": 4,
+      "title": "Save as PDF/DOCX",
+      "icon": "fa-file-pdf",
+      "description": "Always save your resume as a PDF or DOCX file. These formats preserve formatting and are most compatible with ATS systems.",
+      "importance": "high",
+      "color": "#2196F3"
+    },
+    {
+      "id": 5,
+      "title": "Use a Simple Layout",
+      "icon": "fa-layer-group",
+      "description": "Avoid columns, complex formatting, and unusual fonts. A simple, clean layout ensures maximum ATS compatibility.",
+      "importance": "medium",
+      "color": "#9C27B0"
+    },
+    {
+      "id": 6,
+      "title": "Include a Skills Section",
+      "icon": "fa-code",
+      "description": "Create a dedicated skills section listing your technical and soft skills. This is often the first section ATS scans.",
+      "importance": "high",
+      "color": "#4CAF50"
+    },
+    {
+      "id": 7,
+      "title": "Use Action Verbs",
+      "icon": "fa-bolt",
+      "description": "Start bullet points with strong action verbs like 'Led', 'Developed', 'Implemented', 'Achieved' to make your accomplishments stand out.",
+      "importance": "medium",
+      "color": "#00BCD4"
+    },
+    {
+      "id": 8,
+      "title": "Quantify Achievements",
+      "icon": "fa-chart-line",
+      "description": "Use numbers and metrics to demonstrate your impact. For example: 'Increased sales by 40%' or 'Managed team of 15 people'.",
+      "importance": "high",
+      "color": "#FF5722"
+    },
+    {
+      "id": 9,
+      "title": "Customize for Each Job",
+      "icon": "fa-magic",
+      "description": "Tailor your resume for each application. Match keywords and requirements from the specific job description.",
+      "importance": "high",
+      "color": "#E91E63"
+    },
+    {
+      "id": 10,
+      "title": "Keep Formatting Simple",
+      "icon": "fa-font",
+      "description": "Use standard fonts like Arial, Calibri, or Times New Roman. Avoid fancy fonts, underlines, and italics.",
+      "importance": "medium",
+      "color": "#607D8B"
+    }
+  ],
+  "categories": {
+    "formatting": [1, 4, 5, 10],
+    "content": [3, 6, 7, 8, 9],
+    "technical": [2]
+  }
+}

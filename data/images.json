@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "main": "/static/images/hero-bg.jpg",
+    "alternative": "/static/images/hero-bg2.jpg",
+    "slider": [
+      "/static/images/slide1.jpg",
+      "/static/images/slide2.jpg",
+      "/static/images/slide3.jpg"
+    ]
+  },
+  "logos": {
+    "main": "/static/images/logo.png",
+    "white": "/static/images/logo-white.png",
+    "favicon": "/static/images/favicon.ico",
+    "mobile": "/static/images/logo-mobile.png"
+  },
+  "templates": {
+    "modern": "/static/images/templates/modern.png",
+    "professional": "/static/images/templates/professional.png",
+    "creative": "/static/images/templates/creative.png",
+    "minimal": "/static/images/templates/minimal.png",
+    "executive": "/static/images/templates/executive.png",
+    "technical": "/static/images/templates/technical.png"
+  },
+  "features": {
+    "ai": "/static/images/icons/ai.svg",
+    "ats": "/static/images/icons/ats.svg",
+    "template": "/static/images/icons/template.svg",
+    "download": "/static/images/icons/download.svg",
+    "privacy": "/static/images/icons/privacy.svg",
+    "speed": "/static/images/icons/speed.svg"
+  },
+  "backgrounds": {
+    "hero": "/static/images/bg/hero-bg.jpg",
+    "templates": "/static/images/bg/template-bg.jpg",
+    "builder": "/static/images/bg/builder-bg.jpg",
+    "testimonials": "/static/images/bg/testimonial-bg.jpg",
+    "contact": "/static/images/bg/contact-bg.jpg",
+    "footer": "/static/images/bg/footer-bg.jpg"
+  },
+  "testimonials": [
+    {
+      "avatar": "/static/images/avatars/avatar1.jpg",
+      "name": "Sarah Johnson",
+      "company": "Google"
+    },
+    {
+      "avatar": "/static/images/avatars/avatar2.jpg",
+      "name": "Michael Chen",
+      "company": "Amazon"
+    },
+    {
+      "avatar": "/static/images/avatars/avatar3.jpg",
+      "name": "David Patel",
+      "company": "Microsoft"
+    }
+  ],
+  "employers": {
+    "google": "/static/images/employers/google.png",
+    "microsoft": "/static/images/employers/microsoft.png",
+    "amazon": "/static/images/employers/amazon.png",
+    "apple": "/static/images/employers/apple.png",
+    "meta": "/static/images/employers/meta.png",
+    "netflix": "/static/images/employers/netflix.png"
+  },
+  "icons": {
+    "upload": "/static/images/icons/upload.svg",
+    "download": "/static/images/icons/download.svg",
+    "magic": "/static/images/icons/magic.svg",
+    "check": "/static/images/icons/check.svg",
+    "star": "/static/images/icons/star.svg",
+    "quote": "/static/images/icons/quote.svg"
+  },
+  "social": {
+    "facebook": "/static/images/social/facebook.png",
+    "twitter": "/static/images/social/twitter.png",
+    "linkedin": "/static/images/social/linkedin.png",
+    "github": "/static/images/social/github.png",
+    "whatsapp": "/static/images/social/whatsapp.png"
+  }
+}

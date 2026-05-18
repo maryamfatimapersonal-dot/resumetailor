@@ -1,0 +1,73 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "role": "Software Engineer",
+      "company": "Google",
+      "avatar": "/static/images/avatars/sarah.jpg",
+      "rating": 5,
+      "date": "2024-01-15",
+      "text": "ResumeTailor helped me get interviews at top tech companies! The ATS score feature is a game-changer. I landed my dream job at Google within 3 weeks of using this tool.",
+      "verified": true
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "role": "Data Scientist",
+      "company": "Amazon",
+      "avatar": "/static/images/avatars/michael.jpg",
+      "rating": 5,
+      "date": "2024-01-10",
+      "text": "I landed 3 interviews in one week after using this tool. The keyword matching is incredibly accurate! The templates are professional and ATS-friendly.",
+      "verified": true
+    },
+    {
+      "id": 3,
+      "name": "David Patel",
+      "role": "Product Manager",
+      "company": "Microsoft",
+      "avatar": "/static/images/avatars/david.jpg",
+      "rating": 5,
+      "date": "2024-01-05",
+      "text": "Best investment in my job search. Saved hours of manual resume tailoring work. The executive template helped me land a senior PM role.",
+      "verified": true
+    },
+    {
+      "id": 4,
+      "name": "Emily Rodriguez",
+      "role": "Marketing Director",
+      "company": "Meta",
+      "avatar": "/static/images/avatars/emily.jpg",
+      "rating": 5,
+      "date": "2023-12-28",
+      "text": "The creative template is amazing! Got multiple callbacks within days. Highly recommend for marketing professionals.",
+      "verified": true
+    },
+    {
+      "id": 5,
+      "name": "James Wilson",
+      "role": "Senior Developer",
+      "company": "Apple",
+      "avatar": "/static/images/avatars/james.jpg",
+      "rating": 4,
+      "date": "2024-01-20",
+      "text": "Great tool! The technical template perfectly highlighted my skills and projects. Got interviews at FAANG companies.",
+      "verified": true
+    },
+    {
+      "id": 6,
+      "name": "Lisa Zhang",
+      "role": "Consultant",
+      "company": "Deloitte",
+      "avatar": "/static/images/avatars/lisa.jpg",
+      "rating": 5,
+      "date": "2024-01-18",
+      "text": "The professional template is perfect for consulting roles. ATS score feature helped me optimize my resume.",
+      "verified": true
+    }
+  ],
+  "average_rating": 4.8,
+  "total_reviews": 15234,
+  "featured_testimonials": [1, 2, 3]
+}

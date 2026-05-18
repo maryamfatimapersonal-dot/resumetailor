@@ -1,0 +1,34 @@
+{
+  "faqs": [
+    {
+      "question": "What is an ATS?",
+      "answer": "ATS (Applicant Tracking System) is software used by companies to screen resumes. It scans for keywords and filters candidates before human review.",
+      "category": "general"
+    },
+    {
+      "question": "How does ResumeTailor work?",
+      "answer": "Upload your resume, paste the job description, and our AI analyzes both to optimize your resume with relevant keywords and formatting.",
+      "category": "general"
+    },
+    {
+      "question": "Is my data secure?",
+      "answer": "Yes! Your data is encrypted and automatically deleted after 7 days. We never share or sell your information.",
+      "category": "security"
+    },
+    {
+      "question": "What formats are supported?",
+      "answer": "We support PDF, DOCX, and TXT files for upload. You can download your tailored resume in PDF or DOCX format.",
+      "category": "technical"
+    },
+    {
+      "question": "Are the templates really ATS-friendly?",
+      "answer": "Yes! All our templates are designed specifically to be parsed correctly by major ATS systems while still looking professional.",
+      "category": "templates"
+    },
+    {
+      "question": "Can I customize the templates?",
+      "answer": "Absolutely! You can customize colors, fonts, and layout after selecting your template.",
+      "category": "templates"
+    }
+  ]
+}
